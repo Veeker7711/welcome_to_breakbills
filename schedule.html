@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style_schedule.css">
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      if (document.cookie.indexOf("student") == -1)
+      {
+      document.location.href="index.html";
+      }
+    </script>
+
+    Dear student...
+    
+    <div class="contener">
+      <ul class="tab">
+	<li><a href="javascript:void(0)" class="tablinks" onclick="MyLessons(event, 'today')">Today</a></li>
+	<li><a href="javascript:void(0)" class="tablinks" onclick="MyLessons(event, 'tomorrow')">Tomorrow</a></li>
+      </ul>
+      
+      <div id="today" class="tabcontent">
+	<h3>Today</h3>
+	
+      </div>
+
+      <div id="tomorrow" class="tabcontent">
+	<h3>Tomorrow</h3>
+	<div id="registered">
+	  <h4>Registered</h4>
+	</div>
+	
+	<div id="notregistered">
+	  <h4>Not registered</h4>
+	</div>
+	
+      </div>
+    </div>
+    
+    <script src="tab.js"></script>
+    <script src="schedule.js"></script>
+    <script>get_today();</script>
+    <script>get_tommorow();</script>
+  </body>
+  </html>
